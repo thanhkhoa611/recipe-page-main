@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+:root {
+    ---young-serif: "Young Serif", serif;
+    ---outfit: "Outfit", sans-serif;
+    --White: hsl(0, 0%, 100%);
+    --Rose-White: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --Light-Grey: hsl(30, 18%, 87%);
+    --Wenge-Brown: hsl(30, 10%, 34%);
+    --Dark-Charcoal: hsl(24, 5%, 18%);
+    --Nutmeg-primary: hsl(14, 45%, 36%);
+    --Dark-Raspberry-primary: hsl(332, 51%, 32%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 16px;
+    background-color: #f3e5d8;
+}
+
+.primary-title {
+    color: var(--Nutmeg-primary);
+    font-family: var(---young-serif);
+    font-size: 26px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+#main {
+    margin: 125px;
+}
+
+.recipe-page-main {
+    max-width: 740px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 30px;
+}
+
+.recipe-page-img {
+    max-height: 300px;
+}
+
+.recipe-page-img img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.recipe-page-simple {}
+
+.recipe-simple-title {
+    font-family: var(---young-serif);
+    font-weight: 400;
+    margin: 30px 0 20px;
+}
+
+.recipe-simple-desc {
+    font-family: var(---outfit);
+    color: var(--Wenge-Brown);
+    line-height: 1.5;
+}
+
+.recipe-simple-list {
+    background-color: var(--Rose-White);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    font-family: var(---outfit);
+}
+
+.simple-list-title {
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--Dark-Raspberry-primary);
+}
+
+.recipe-simple-item {
+    margin-left: 25px;
+}
+
+.recipe-simple-item p {
+    margin-left: 13px;
+}
+
+.recipe-page-ingredients+hr {
+    margin-top: 30px;
+}
+
+.recipe-ingredients-title {}
+
+.recipe-ingredients-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-left: 25px;
+    font-family: var(---outfit);
+}
+
+.recipe-ingredients-item p {
+    margin-left: 15px;
+}
+
+.recipe-page-instructions {
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--Light-Grey);
+}
+
+.recipe-instruction-title {}
+
+.recipe-instruction-list {
+    font-family: var(---outfit);
+    margin: 20px 25px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.recipe-ingredients-item::marker,
+.recipe-instruction-item::marker {
+    color: var(--Nutmeg-primary);
+    font-family: var(---outfit);
+    font-weight: 600;
+}
+
+.recipe-instruction-item {
+    line-height: 1.5;
+}
+
+.recipe-instruction-item p {
+    margin-left: 15px;
+}
+
+.nutrition {
+    color: var(--Wenge-Brown);
+}
+
+.nutrition-title {}
+
+.nutrition-desc {
+    margin-top: 15px;
+    font-family: var(---outfit);
+}
+
+.nutrtion-table {
+    padding: 20px 0 0 30px;
+}
+
+.nutrtion-table .table-row {
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--Light-Grey);
+    position: relative;
+    font-family: var(---outfit);
+}
+
+.nutrtion-table .table-row p:first-child {
+    width: 50%;
+}
+
+.nutrtion-table .table-row p:last-child {
+    color: var(--Nutmeg-primary);
+    font-weight: 600;
+}
+
+footer {
+    position: relative;
+}
+
+footer p {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width: 376px) {
+    .primary-title {
+        font-size: 30px;
+    }
+    #main {
+        margin: 0;
+    }
+    .recipe-page-main {
+        padding: 0 30px 30px;
+        border-radius: 0;
+    }
+    .recipe-page-img {
+        margin: -40px -40px 0 -40px;
+    }
+    .recipe-page-img img {
+        border-radius: 0;
+    }
+    .recipe-page-simple {
+        margin-top: 35px;
+    }
+    .recipe-simple-item {
+        position: relative;
+    }
+    .recipe-simple-item::after {
+        position: absolute;
+        content: "";
+    }
+    .recipe-instruction-item p {
+        font-size: 15px;
+    }
+    .nutrtion-table .table-row:last-child {
+        border: none;
+    }
+    footer {
+        font-size: 12px;
+        margin-top: 100px;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 680px) {
+    #main {
+        margin: 70px;
+    }
+}
