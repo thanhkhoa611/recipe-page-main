@@ -188,7 +188,7 @@ footer p {
     transform: translateX(-50%);
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 430px) {
     .primary-title {
         font-size: 30px;
     }
